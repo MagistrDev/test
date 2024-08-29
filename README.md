@@ -1,52 +1,5 @@
 
-    <style>
-      /* Стили для таблиц */
-      .table-wrapper {
-        display: flex;
-        justify-content: center;
-        padding: 0 40px; /* Отступы слева и справа */
-        box-sizing: border-box;
-        margin: 20px 0;
-      }
-
-      table {
-        width: auto;
-        max-width: 100%;
-        border-collapse: collapse;
-      }
-
-      th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-
-      th {
-        background-color: #f6f8fa;
-        font-weight: bold;
-      }
-
-      code {
-        background-color: #f6f8fa;
-        color: #e83e8c;
-        padding: 2px 4px;
-        border-radius: 3px;
-        font-family: Consolas, "Courier New", Courier, monospace;
-        font-size: 90%;
-        white-space: pre-wrap;
-        display: inline-block;
-      }
-
-      /* Стили для контейнера .shell */
-      .shell-wrapper {
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
-        box-sizing: border-box;
-        margin: 20px 0;
-      }
-    </style>
-    <h1>ZME_MAKE</h1>
+<h1>ZME_MAKE</h1>
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#build">build</a></li>
@@ -69,41 +22,39 @@
 <p>zme_make -h</p>
 </blockquote>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make -h</pre>
-<pre>usage: zme_make.py [-h]</pre>
-<pre>                   {build,upload,upload_bin,boot,boardInfo,eraseNVM,writeNVM,dumpNVM,arduino_size,arduino_dummy,arduino_preproc,trace,radiotest,serialmonitor,pinmap} ...</pre>
-<pre></pre>
-<pre>ZWave>ME make tool for ZUno G2. Version:0.402b18 DBG_MODE:True Welcome :)</pre>
-<pre></pre>
-<pre>positional arguments:</pre>
-<pre>  {build,upload,upload_bin,boot,boardInfo,eraseNVM,writeNVM,dumpNVM,arduino_size,arduino_dummy,arduino_preproc,trace,radiotest,serialmonitor,pinmap}</pre>
-<pre>    build               Builds a sketch.</pre>
-<pre>    upload              Uploads a sketch to board.</pre>
-<pre>    upload_bin          Uploads a binarie file to board.</pre>
-<pre>    boot                Uploads bootloader.</pre>
-<pre>    boardInfo           Extracts metadata from connected Z-Uno board</pre>
-<pre>    eraseNVM            Erases device NVM data completely.</pre>
-<pre>    writeNVM            Writes data to device NVM memory.</pre>
-<pre>    dumpNVM             Dumps NVM from device.</pre>
-<pre>    arduino_size        Returns memory size allocated by sketch.</pre>
-<pre>    arduino_dummy       Dummy function to meet requirements of Arduino build system.</pre>
-<pre>    arduino_preproc     Makes the right name of sketch.</pre>
-<pre>    trace               Trace packages.</pre>
-<pre>    radiotest           Starts radio test on Z-Uno.</pre>
-<pre>    serialmonitor       Starts serial monitor on defined port.</pre>
-<pre>    pinmap              Creates custom pinmapping for vendor configuration.</pre>
-<pre></pre>
-<pre>options:</pre>
-<pre>  -h, --help            show this help message and exit</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make -h</pre>
+<pre>$ usage: zme_make.py [-h]</pre>
+<pre>$                    {build,upload,upload_bin,boot,boardInfo,eraseNVM,writeNVM,dumpNVM,arduino_size,arduino_dummy,arduino_preproc,trace,radiotest,serialmonitor,pinmap} ...</pre>
+<pre>$ ZWave>ME make tool for ZUno G2. Version:0.402b18 DBG_MODE:True Welcome :)</pre>
+<pre>$ positional arguments:</pre>
+<pre>$   {build,upload,upload_bin,boot,boardInfo,eraseNVM,writeNVM,dumpNVM,arduino_size,arduino_dummy,arduino_preproc,trace,radiotest,serialmonitor,pinmap}</pre>
+<pre>$     build               Builds a sketch.</pre>
+<pre>$     upload              Uploads a sketch to board.</pre>
+<pre>$     upload_bin          Uploads a binarie file to board.</pre>
+<pre>$     boot                Uploads bootloader.</pre>
+<pre>$     boardInfo           Extracts metadata from connected Z-Uno board</pre>
+<pre>$     eraseNVM            Erases device NVM data completely.</pre>
+<pre>$     writeNVM            Writes data to device NVM memory.</pre>
+<pre>$     dumpNVM             Dumps NVM from device.</pre>
+<pre>$     arduino_size        Returns memory size allocated by sketch.</pre>
+<pre>$     arduino_dummy       Dummy function to meet requirements of Arduino build system.</pre>
+<pre>$     arduino_preproc     Makes the right name of sketch.</pre>
+<pre>$     trace               Trace packages.</pre>
+<pre>$     radiotest           Starts radio test on Z-Uno.</pre>
+<pre>$     serialmonitor       Starts serial monitor on defined port.</pre>
+<pre>$     pinmap              Creates custom pinmapping for vendor configuration.</pre>
+<pre>$ options:</pre>
+<pre>$   -h, --help            show this help message and exit</pre>
 
+          </div>
         </div>
       </div>
     <h2>BUILD</h2>
@@ -113,16 +64,17 @@
 </blockquote>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make build [-h] [-B BUILD_DIR] [-S SOURCE_DIR] [-T TOOLS_PATH] [-lcl LIBCLANG_PATH] [-D DEFINE] [-O OPTIONS] [-C CHIP_NAME] filename</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make build [-h] [-B BUILD_DIR] [-S SOURCE_DIR] [-T TOOLS_PATH] [-lcl LIBCLANG_PATH] [-D DEFINE] [-O OPTIONS] [-C CHIP_NAME] filename</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options:</h3>
@@ -184,36 +136,37 @@
 </table>
 <h3>Example:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make build -B ./build -T /usr/bin -lcl ./libclang -S ./hardware/arduino/zunoG2/cores -S ./hardware/arduino/zunoG2/libraries -S /usr/bin/arm-none-eabi/include -c ZGM130S037HGN1 RadioBlink.ino </pre>
-<pre>          ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>preprocessing "RadioBlink.ino"           ..............................2) MODERN MCH+</pre>
-<pre>MODERN MCH+</pre>
-<pre>preprocessing "RadioBlink.ino"           ..............................                            OK</pre>
-<pre>          Core version: 03.12 Channels:1</pre>
-<pre>          --- Full rebuild because of preprocessing changes!</pre>
-<pre>          Chip depending configuration. Chip:ZGM130S037HGN1</pre>
-<pre>Gathering project files                  ..............................                            OK</pre>
-<pre>compiling "em_wdog.c"                    ..............................                            OK</pre>
-<pre>......</pre>
-<pre>......</pre>
-<pre>......</pre>
-<pre>linking "RadioBlink_ino.elf"             ..............................                            OK</pre>
-<pre>result "RadioBlink_ino.hex"              ..............................                            OK</pre>
-<pre>signed "RadioBlink_ino_signed.bin"       ..............................                            OK</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>          OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make build -B ./build -T /usr/bin -lcl ./libclang -S ./hardware/arduino/zunoG2/cores -S ./hardware/arduino/zunoG2/libraries -S /usr/bin/arm-none-eabi/include -c ZGM130S037HGN1 RadioBlink.ino </pre>
+<pre>$           ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$ preprocessing "RadioBlink.ino"           ..............................2) MODERN MCH+</pre>
+<pre>$ MODERN MCH+</pre>
+<pre>$ preprocessing "RadioBlink.ino"           ..............................                            OK</pre>
+<pre>$           Core version: 03.12 Channels:1</pre>
+<pre>$           --- Full rebuild because of preprocessing changes!</pre>
+<pre>$           Chip depending configuration. Chip:ZGM130S037HGN1</pre>
+<pre>$ Gathering project files                  ..............................                            OK</pre>
+<pre>$ compiling "em_wdog.c"                    ..............................                            OK</pre>
+<pre>$ ......</pre>
+<pre>$ ......</pre>
+<pre>$ ......</pre>
+<pre>$ linking "RadioBlink_ino.elf"             ..............................                            OK</pre>
+<pre>$ result "RadioBlink_ino.hex"              ..............................                            OK</pre>
+<pre>$ signed "RadioBlink_ino_signed.bin"       ..............................                            OK</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$           OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$           Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
 
+          </div>
         </div>
       </div>
     <p>&lt;/div&gt;</p>
@@ -302,79 +255,81 @@
 </table>
 <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make upload RadioBlink.ino -B ./build -p main_pow=50 -p sec=0 -fr EU -d COM9</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>Openning port                            ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>--- Sketch addr:00030800</pre>
-<pre>          DEVICE CFG</pre>
-<pre>                Z-Wave Region:EU</pre>
-<pre>                Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
-<pre>Writing NVM data                         ..............................                            OK</pre>
-<pre>          Elapsed:1.5935</pre>
-<pre>          Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
-<pre>Pushing sketch                           ..............................                            OK</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make upload RadioBlink.ino -B ./build -p main_pow=50 -p sec=0 -fr EU -d COM9</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ Openning port                            ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ --- Sketch addr:00030800</pre>
+<pre>$           DEVICE CFG</pre>
+<pre>$                 Z-Wave Region:EU</pre>
+<pre>$                 Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
+<pre>$ Writing NVM data                         ..............................                            OK</pre>
+<pre>$           Elapsed:1.5935</pre>
+<pre>$           Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
+<pre>$ Pushing sketch                           ..............................                            OK</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
 
+          </div>
         </div>
       </div>
     <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make build RadioBlink.ino -B %DIR_OUT%\ -T %CD%\gcc3.10\bin\ -lcl %CD%\libClang -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include</pre>
-<pre></pre>
-<pre>          ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>preprocessing "RadioBlink.ino"           ..............................2) MODERN MCH+</pre>
-<pre>MODERN MCH+</pre>
-<pre>preprocessing "RadioBlink.ino"           ..............................                            OK</pre>
-<pre>          Core version: 03.12 Channels:1</pre>
-<pre>          --- Full rebuild because of preprocessing changes!</pre>
-<pre>          Chip depending configuration. Chip:ZGM130S037HGN1</pre>
-<pre>Gathering project files                  ..............................                            OK</pre>
-<pre>compiling "em_wdog.c"                    ..............................                            OK</pre>
-<pre>......</pre>
-<pre>......</pre>
-<pre>......</pre>
-<pre>linking "RadioBlink_ino.elf"             ..............................                            OK</pre>
-<pre>result "RadioBlink_ino.hex"              ..............................                            OK</pre>
-<pre>signed "RadioBlink_ino_signed.bin"       ..............................                            OK</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>          OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
-<pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre>          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make build RadioBlink.ino -B %DIR_OUT%\ -T %CD%\gcc3.10\bin\ -lcl %CD%\libClang -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include</pre>
+<pre>$           ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$ preprocessing "RadioBlink.ino"           ..............................2) MODERN MCH+</pre>
+<pre>$ MODERN MCH+</pre>
+<pre>$ preprocessing "RadioBlink.ino"           ..............................                            OK</pre>
+<pre>$           Core version: 03.12 Channels:1</pre>
+<pre>$           --- Full rebuild because of preprocessing changes!</pre>
+<pre>$           Chip depending configuration. Chip:ZGM130S037HGN1</pre>
+<pre>$ Gathering project files                  ..............................                            OK</pre>
+<pre>$ compiling "em_wdog.c"                    ..............................                            OK</pre>
+<pre>$ ......</pre>
+<pre>$ ......</pre>
+<pre>$ ......</pre>
+<pre>$ linking "RadioBlink_ino.elf"             ..............................                            OK</pre>
+<pre>$ result "RadioBlink_ino.hex"              ..............................                            OK</pre>
+<pre>$ signed "RadioBlink_ino_signed.bin"       ..............................                            OK</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$           OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
+<pre>$           -----------------------------------------------------------------------------------------------</pre>
+<pre>$           Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
 
+          </div>
         </div>
       </div>
     <h2>UPLOAD BIN</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make upload_bin [-h] [-d DEVICE] [-lb [LEGACY_BAUD]] [-ub ULTRA_BAUD] [-e [EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS] filename</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make upload_bin [-h] [-d DEVICE] [-lb [LEGACY_BAUD]] [-ub ULTRA_BAUD] [-e [EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS] filename</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -431,44 +386,46 @@
 </table>
 <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make upload_bin -d COM11 .\build\RadioBlink\RadioBlink_ino_signed.bin</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>Openning port                            ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>--- Sketch addr:00030800</pre>
-<pre>          DEVICE CFG</pre>
-<pre>                Z-Wave Region:EU</pre>
-<pre>                Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
-<pre>Writing NVM data                         ..............................                            OK</pre>
-<pre>          Elapsed:1.5978</pre>
-<pre>          Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
-<pre>Pushing sketch                           ..............................                            OK</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make upload_bin -d COM11 .\build\RadioBlink\RadioBlink_ino_signed.bin</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ Openning port                            ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ --- Sketch addr:00030800</pre>
+<pre>$           DEVICE CFG</pre>
+<pre>$                 Z-Wave Region:EU</pre>
+<pre>$                 Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
+<pre>$ Writing NVM data                         ..............................                            OK</pre>
+<pre>$           Elapsed:1.5978</pre>
+<pre>$           Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
+<pre>$ Pushing sketch                           ..............................                            OK</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
 
+          </div>
         </div>
       </div>
     <h2>BOOT</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make boot [-h] [-c CATALOG] [-f FILENAME] [-d DEVICE] [-i [INFO]] [-lb [LEGACY_BAUD]] [-t [TEST]] [-ub ULTRA_BAUD] [-ne [NO_EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS]</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make boot [-h] [-c CATALOG] [-f FILENAME] [-d DEVICE] [-i [INFO]] [-lb [LEGACY_BAUD]] [-t [TEST]] [-ub ULTRA_BAUD] [-ne [NO_EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS]</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -540,44 +497,46 @@
 </table>
 <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make boot -d com11 -c \hardware\arduino\zunoG2\bootloaders\</pre>
-<pre>BOOTLOADER</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>Openning port                            ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>          Using bootloader:\hardware\arduino\zunoG2\bootloaders\zuno_bootloader_HW0704.bin</pre>
-<pre>Writing NVM data                         ..............................                            OK</pre>
-<pre>          Elapsed:15.1096</pre>
-<pre>Loading image                            ..............................                            OK</pre>
-<pre>Rebooting Chip                           ..............................                            OK</pre>
-<pre>Checking image                           ..............................                            OK</pre>
-<pre>Waiting for bootloader                   ..............................                            OK</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make boot -d com11 -c \hardware\arduino\zunoG2\bootloaders\</pre>
+<pre>$ BOOTLOADER</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ Openning port                            ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$           Using bootloader:\hardware\arduino\zunoG2\bootloaders\zuno_bootloader_HW0704.bin</pre>
+<pre>$ Writing NVM data                         ..............................                            OK</pre>
+<pre>$           Elapsed:15.1096</pre>
+<pre>$ Loading image                            ..............................                            OK</pre>
+<pre>$ Rebooting Chip                           ..............................                            OK</pre>
+<pre>$ Checking image                           ..............................                            OK</pre>
+<pre>$ Waiting for bootloader                   ..............................                            OK</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
 
+          </div>
         </div>
       </div>
     <h2>Board info</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make boardInfo [-h] [-d DEVICE] [-p PARAMS] [-n NIF] [-q QR_CODE] [-lb [LEGACY_BAUD]] [-lu LIC_UPLOAD] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]] [-dp DUMP_PRODUCT]</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make boardInfo [-h] [-d DEVICE] [-p PARAMS] [-n NIF] [-q QR_CODE] [-lb [LEGACY_BAUD]] [-lu LIC_UPLOAD] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]] [-dp DUMP_PRODUCT]</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -644,92 +603,80 @@
 </table>
 <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make boardInfo -d com11</pre>
-<pre>BOARD INFO</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>Openning port                            ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>          ------------------------------------------------------------------------------------</pre>
-<pre>                                        Z-Uno board information</pre>
-<pre>          ------------------------------------------------------------------------------------</pre>
-<pre></pre>
-<pre>          FIRMWARE</pre>
-<pre></pre>
-<pre>                 VERSION:               03.12</pre>
-<pre>                 BUILD_SEQUENCE:        00004328</pre>
-<pre>                 BUILD_DATETIME:        2024-07-29T20:53:31(MSK)</pre>
-<pre>                 SUPPORTED_HWREV:       0704</pre>
-<pre>                 KEY HASH:              8e19cc54</pre>
-<pre>                 SE VERSION:            00000000</pre>
-<pre></pre>
-<pre>          LIMITS</pre>
-<pre></pre>
-<pre>                 CODE:  456704 Bytes</pre>
-<pre>                 RAM:   16384 Bytes</pre>
-<pre></pre>
-<pre>          HARDWARE</pre>
-<pre></pre>
-<pre>                 CHIP_FAMILY:    ZGM13 Module (00)</pre>
-<pre>                 CHIP_TYPE:      ZGM130S037HGN1 (02)</pre>
-<pre>                 CHIP_UID:       84 2E 14 FF FE 6A 28 9B</pre>
-<pre>                 PROD_TIME:      2024-05-29T16:11:10(MSK)</pre>
-<pre>                 PROD_SN:        2</pre>
-<pre>                 LOCK:           UNLOCKED</pre>
-<pre>                 EXT NVM:        0</pre>
-<pre></pre>
-<pre>          LICENSE</pre>
-<pre></pre>
-<pre>                 SUB_VENDOR:    0000</pre>
-<pre>                 BITMASK:       0000000000000020</pre>
-<pre>                 FEATURES:      [LONG_RANGE]</pre>
-<pre>                 CRC16:         ff91</pre>
-<pre></pre>
-<pre>          NETWORK</pre>
-<pre></pre>
-<pre>                 HOMEID:        f65b8f92</pre>
-<pre>                 NODEID:        9</pre>
-<pre></pre>
-<pre>          SECURITY</pre>
-<pre></pre>
-<pre>                S2 DSK:         46593-06376-32171-65094-27264-38172-33243-09871</pre>
-<pre>                                _____</pre>
-<pre>                S2 PIN:         46593</pre>
-<pre>                QR-Code:        90010369013146593063763217165094272643817233243098710010040960179202200027700528000010078008030010403005</pre>
-<pre>          ------------------------------------------------------------------------------------</pre>
-<pre></pre>
-<pre>          SKETCH</pre>
-<pre></pre>
-<pre>           -- NO VALID SKETCH --</pre>
-<pre>          DEVICE CFG</pre>
-<pre>                Z-Wave Region:EU</pre>
-<pre>                Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
-<pre>Reseting chip                            ..............................                            OK</pre>
-<pre>DONE</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make boardInfo -d com11</pre>
+<pre>$ BOARD INFO</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ Openning port                            ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$           ------------------------------------------------------------------------------------</pre>
+<pre>$                                         Z-Uno board information</pre>
+<pre>$           ------------------------------------------------------------------------------------</pre>
+<pre>$           FIRMWARE</pre>
+<pre>$                  VERSION:               03.12</pre>
+<pre>$                  BUILD_SEQUENCE:        00004328</pre>
+<pre>$                  BUILD_DATETIME:        2024-07-29T20:53:31(MSK)</pre>
+<pre>$                  SUPPORTED_HWREV:       0704</pre>
+<pre>$                  KEY HASH:              8e19cc54</pre>
+<pre>$                  SE VERSION:            00000000</pre>
+<pre>$           LIMITS</pre>
+<pre>$                  CODE:  456704 Bytes</pre>
+<pre>$                  RAM:   16384 Bytes</pre>
+<pre>$           HARDWARE</pre>
+<pre>$                  CHIP_FAMILY:    ZGM13 Module (00)</pre>
+<pre>$                  CHIP_TYPE:      ZGM130S037HGN1 (02)</pre>
+<pre>$                  CHIP_UID:       84 2E 14 FF FE 6A 28 9B</pre>
+<pre>$                  PROD_TIME:      2024-05-29T16:11:10(MSK)</pre>
+<pre>$                  PROD_SN:        2</pre>
+<pre>$                  LOCK:           UNLOCKED</pre>
+<pre>$                  EXT NVM:        0</pre>
+<pre>$           LICENSE</pre>
+<pre>$                  SUB_VENDOR:    0000</pre>
+<pre>$                  BITMASK:       0000000000000020</pre>
+<pre>$                  FEATURES:      [LONG_RANGE]</pre>
+<pre>$                  CRC16:         ff91</pre>
+<pre>$           NETWORK</pre>
+<pre>$                  HOMEID:        f65b8f92</pre>
+<pre>$                  NODEID:        9</pre>
+<pre>$           SECURITY</pre>
+<pre>$                 S2 DSK:         46593-06376-32171-65094-27264-38172-33243-09871</pre>
+<pre>$                                 _____</pre>
+<pre>$                 S2 PIN:         46593</pre>
+<pre>$                 QR-Code:        90010369013146593063763217165094272643817233243098710010040960179202200027700528000010078008030010403005</pre>
+<pre>$           ------------------------------------------------------------------------------------</pre>
+<pre>$           SKETCH</pre>
+<pre>$            -- NO VALID SKETCH --</pre>
+<pre>$           DEVICE CFG</pre>
+<pre>$                 Z-Wave Region:EU</pre>
+<pre>$                 Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
+<pre>$ Reseting chip                            ..............................                            OK</pre>
+<pre>$ DONE</pre>
 
+          </div>
         </div>
       </div>
     <h2>Erase NVM</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make eraseNVM [-h] [-d DEVICE] [-r [RAW_MODE]] [-a ADDRESS] [-s SIZE] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]]</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make eraseNVM [-h] [-d DEVICE] [-r [RAW_MODE]] [-a ADDRESS] [-s SIZE] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]]</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -781,38 +728,39 @@
 </table>
 <h3>Example</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make eraseNVM -d com11</pre>
-<pre>NVM Erase</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>Openning port                            ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Syncing with Z-Uno                       ..............................                            OK</pre>
-<pre>Closing port                             ..............................                            OK</pre>
-<pre>DONE</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make eraseNVM -d com11</pre>
+<pre>$ NVM Erase</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ Openning port                            ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Syncing with Z-Uno                       ..............................                            OK</pre>
+<pre>$ Closing port                             ..............................                            OK</pre>
+<pre>$ DONE</pre>
 
+          </div>
         </div>
       </div>
     <h2>WRITE NVM</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -828,16 +776,16 @@
 <h2>DUMP NVM</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -853,16 +801,17 @@
 <h2>ARDUINO SIZE</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make arduino_size [-h] [-B BUILD_DIR] filename</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make arduino_size [-h] [-B BUILD_DIR] filename</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -889,34 +838,34 @@
 </table>
 <h3>Example:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make arduino_size -B D:\build\RadioBlink RadioBlink.ino </pre>
-<pre></pre>
-<pre>.text   18168</pre>
-<pre>.ram    1524</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make arduino_size -B D:\build\RadioBlink RadioBlink.ino </pre>
+<pre>$ .text   18168</pre>
+<pre>$ .ram    1524</pre>
 
+          </div>
         </div>
       </div>
     <h2>ARDUINO DUMMY</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -932,16 +881,16 @@
 <h2>ARDUINO PREPROC</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -957,17 +906,18 @@
 <h2>с</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>$ zme_make trace [-h] [-d DEVICE] [-b BAUDRATE] [-fr {EU,US,ANZ,HK,MY,IN,IL,RU,CN,US_LR,US_LR_BK,EU_LR,JP,KR,FK}] [-tp TX_POWER] [-t {MODEM,PTI}] [-i INPUT] [-f FILTER] [-ir [INPUT_REENCODE]] [-o OUTPUT]</pre>
-<pre>                         [-mp MAX_PACKAGES] [-mt MAX_TIME] [-p PROFILE] [-s SEND] [-r {off,payload,full,complex,hex_app}] [-dt {auto,z-uno,sapi}] [-nab [NO_AUTO_BAUD]]</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ $ zme_make trace [-h] [-d DEVICE] [-b BAUDRATE] [-fr {EU,US,ANZ,HK,MY,IN,IL,RU,CN,US_LR,US_LR_BK,EU_LR,JP,KR,FK}] [-tp TX_POWER] [-t {MODEM,PTI}] [-i INPUT] [-f FILTER] [-ir [INPUT_REENCODE]] [-o OUTPUT]</pre>
+<pre>$                          [-mp MAX_PACKAGES] [-mt MAX_TIME] [-p PROFILE] [-s SEND] [-r {off,payload,full,complex,hex_app}] [-dt {auto,z-uno,sapi}] [-nab [NO_AUTO_BAUD]]</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -1060,16 +1010,16 @@
 <h2>RADIO TEST</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -1085,16 +1035,16 @@
 <h2>SERIAL MONITOR</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre></pre>
-<pre></pre>
-
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            
+          </div>
         </div>
       </div>
     <h3>Options</h3>
@@ -1110,16 +1060,17 @@
 <h2>PINMAP</h2>
 <h3>Usage:</h3>
 
-      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
-        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
-          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
-        </div>
-        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
-          <pre>zme_make.py pinmap [-h] [-c {ZGM130S037HGN1,ZGM230SB27HGN,ZGM230SA27HGN,EFR32ZG23B020F512IM48,EFR32ZG23B010F512IM48,EFR32ZG23A010F512GM40}] [-s [SWD_AS_UART]] [-v VENDOR] [-pt PRODUCTTYPE_ID] [-pi PRODUCT_ID] [-pow POWER_MAX] [-efr EXTERNAL_MEMORY_FREQUENCY] [-m MAP] [-l [PINNAME_LIST]]</pre>
-<pre></pre>
+      <div>
+        <div style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 100%; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+          <div style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+            <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
+          </div>
+          <div style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+            <pre>$ zme_make.py pinmap [-h] [-c {ZGM130S037HGN1,ZGM230SB27HGN,ZGM230SA27HGN,EFR32ZG23B020F512IM48,EFR32ZG23B010F512IM48,EFR32ZG23A010F512GM40}] [-s [SWD_AS_UART]] [-v VENDOR] [-pt PRODUCTTYPE_ID] [-pi PRODUCT_ID] [-pow POWER_MAX] [-efr EXTERNAL_MEMORY_FREQUENCY] [-m MAP] [-l [PINNAME_LIST]]</pre>
 
+          </div>
         </div>
       </div>
     <h3>Options:</h3>
@@ -1799,5 +1750,3 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-
-  
