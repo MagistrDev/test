@@ -1,193 +1,53 @@
 
-  <script>
-  const style = document.createElement('style');
-  style.textContent = `
-  /* Обёртка для таблицы */
-.table-wrapper {
-    display: flex;
-    justify-content: flex-start; /* Выравнивание по левому краю */
-    padding: 0 400px; /* Увеличенные отступы слева и справа */
-    box-sizing: border-box; /* Учитываем отступы и границы в ширине элемента */
-    margin: 20px 0; /* Отступы сверху и снизу */
-}
+    <style>
+      /* Стили для таблиц */
+      .table-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 0 40px; /* Отступы слева и справа */
+        box-sizing: border-box;
+        margin: 20px 0;
+      }
 
-/* Таблица */
-table {
-    width: auto; /* Ширина таблицы соответствует содержимому */
-    max-width: 100%; /* Не превышает ширину экрана */
-    border-collapse: collapse; /* Убираем двойные границы между ячейками */
-    overflow-x: auto; /* Включаем горизонтальную прокрутку, если таблица выходит за границы */
-    word-wrap: break-word; /* Перенос слов при необходимости */
-}
+      table {
+        width: auto;
+        max-width: 100%;
+        border-collapse: collapse;
+      }
 
-/* Стилизация таблицы */
-th, td {
-    border: 1px solid #ddd; /* Граница для ячеек */
-    padding: 8px; /* Отступы внутри ячеек */
-    text-align: left; /* Текст в ячейках выровнен по левому краю */
-}
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
 
-/* Адаптивный стиль для заголовков таблицы */
-th {
-    background-color: #f6f8fa; /* Фон для заголовков, похожий на GitHub */
-    font-weight: bold; /* Жирный текст для заголовков */
-}
+      th {
+        background-color: #f6f8fa;
+        font-weight: bold;
+      }
 
-/* Стиль для кода */
-code {
-    background-color: #f6f8fa; /* Светло-серый фон для выделения кода */
-    color: #e83e8c; /* Цвет текста для кода */
-    padding: 2px 4px; /* Отступы вокруг текста кода */
-    border-radius: 3px; /* Закругленные углы */
-    font-family: Consolas, "Courier New", Courier, monospace; /* Шрифт с фиксированной шириной */
-    font-size: 90%; /* Размер шрифта чуть меньше основного */
-    white-space: pre-wrap; /* Сохраняем пробелы и переносы строк */
-    display: inline-block; /* Для лучшего выравнивания */
-}
+      code {
+        background-color: #f6f8fa;
+        color: #e83e8c;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: Consolas, "Courier New", Courier, monospace;
+        font-size: 90%;
+        white-space: pre-wrap;
+        display: inline-block;
+      }
 
-
-  /* Обёртка для контейнера .shell */
-.shell-wrapper {
-    display: flex;
-    justify-content: center; /* Центрирование контейнера по горизонтали */
-    padding: 0 20px; /* Отступы слева и справа */
-    box-sizing: border-box; /* Учитываем отступы в общей ширине */
-    margin: 20px 0; /* Отступы сверху и снизу */
-  }
-/* Контейнер с классом .shell */
-.shell {
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    color: #e6e6e6;
-    font-size: 16px;
-    line-height: 1.5;
-    width: 120ch; /* Ограничение ширины до 120 символов */
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    overflow-x: auto; /* Горизонтальная прокрутка, если текст не помещается */
-    margin: 0 auto; /* Центрирование контейнера по горизонтали */
-  }
-  .shell-header {
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .shell-header span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .shell-header .red {
-    background-color: #ff605c;
-  }
-  
-  .shell-header .yellow {
-    background-color: #ffbd44;
-  }
-  
-  .shell-header .green {
-    background-color: #00ca4e;
-  }
-  
-  .shell-body {
-    background-color: #000;
-    padding: 15px;
-    border-radius: 4px;
-    color: #00ff00;
-    overflow-x: auto;
-  }
-  
-
-  
-  .cmd {
-    color: #00ff00;
-  }
-  
-  pre {
-    margin: 0;
-  }
-  
-  .cmd::after {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background-color: #00ff00;
-    margin-left: 5px;
-    animation: blink 1s steps(2, start) infinite;
-  }
-  
-  @keyframes blink {
-    to {
-      visibility: hidden;
-    }
-  }
-  .powershell {
-    background-color: #012456;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.5;
-    max-width: 600px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  .powershell-header {
-    background-color: #007ACC;
-    padding: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
-  .powershell-header span {
-    margin-left: 10px;
-  }
-  
-  .powershell-body {
-    background-color: #012456;
-    padding: 15px;
-    border-radius: 4px;
-    color: #d4d4d4;
-  }
-  
-  .cmd {
-    color: #00ff00;
-  }
-  
-  pre {
-    margin: 0;
-    white-space: pre-wrap;
-  }
-  
-  .cmd::after {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background-color: #00ff00;
-    margin-left: 5px;
-    animation: blink 1s steps(2, start) infinite;
-  }
-  
-  @keyframes blink {
-    to {
-      visibility: hidden;
-    }
-  }    
-  `;
-
-  // Добавляем <style> элемент в <head>
-  document.head.appendChild(style);
-</script>
-<h1>ZME_MAKE</h1>
-<h2 id="table-of-contents" tabindex="-1">Table of Contents</h2>
+      /* Стили для контейнера .shell */
+      .shell-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 20px 0;
+      }
+    </style>
+    <h1>ZME_MAKE</h1>
+<h2>Table of Contents</h2>
 <ul>
 <li><a href="#build">build</a></li>
 <li><a href="#upload">upload</a></li>
@@ -204,18 +64,18 @@ code {
 <li><a href="#license">serialmonitor</a></li>
 <li><a href="#pinmap">pinmap</a></li>
 </ul>
-<h3 id="get-the-list-of-available-commands-" tabindex="-1">Get the list of available commands:</h3>
+<h3>Get the list of available commands:</h3>
 <blockquote>
 <p>zme_make -h</p>
 </blockquote>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make -h</pre>
 <pre>usage: zme_make.py [-h]</pre>
 <pre>                   {build,upload,upload_bin,boot,boardInfo,eraseNVM,writeNVM,dumpNVM,arduino_size,arduino_dummy,arduino_preproc,trace,radiotest,serialmonitor,pinmap} ...</pre>
@@ -241,31 +101,31 @@ code {
 <pre>    pinmap              Creates custom pinmapping for vendor configuration.</pre>
 <pre></pre>
 <pre>options:</pre>
-<pre><span class="cmd">  -h, --help            show this help message and exit</span></pre>
+<pre>  -h, --help            show this help message and exit</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="build" tabindex="-1">BUILD</h2>
-<h3 id="description-" tabindex="-1">Description:</h3>
+    <h2>BUILD</h2>
+<h3>Description:</h3>
 <blockquote>
 <p>Build sketch *.ino file before upload</p>
 </blockquote>
-<h3 id="usage-" tabindex="-1">Usage:</h3>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make build [-h] [-B BUILD_DIR] [-S SOURCE_DIR] [-T TOOLS_PATH] [-lcl LIBCLANG_PATH] [-D DEFINE] [-O OPTIONS] [-C CHIP_NAME] filename</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make build [-h] [-B BUILD_DIR] [-S SOURCE_DIR] [-T TOOLS_PATH] [-lcl LIBCLANG_PATH] [-D DEFINE] [-O OPTIONS] [-C CHIP_NAME] filename</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-" tabindex="-1">Options:</h3>
+    <h3>Options:</h3>
 <table>
 <thead>
 <tr>
@@ -322,15 +182,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example-" tabindex="-1">Example:</h3>
+<h3>Example:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make build -B ./build -T /usr/bin -lcl ./libclang -S ./hardware/arduino/zunoG2/cores -S ./hardware/arduino/zunoG2/libraries -S /usr/bin/arm-none-eabi/include -c ZGM130S037HGN1 RadioBlink.ino </pre>
 <pre>          ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
 <pre>          -----------------------------------------------------------------------------------------------</pre>
@@ -351,14 +211,14 @@ code {
 <pre>          -----------------------------------------------------------------------------------------------</pre>
 <pre>          OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
 <pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre><span class="cmd">          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</span></pre>
+<pre>          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
 <pre></pre>
 
         </div>
       </div>
     <p>&lt;/div&gt;</p>
-<h2 id="upload" tabindex="-1">UPLOAD</h2>
-<h3 id="options" tabindex="-1">Options</h3>
+<h2>UPLOAD</h2>
+<h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -440,15 +300,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example" tabindex="-1">Example</h3>
+<h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make upload RadioBlink.ino -B ./build -p main_pow=50 -p sec=0 -fr EU -d COM9</pre>
 <pre>Closing port                             ..............................                            OK</pre>
 <pre>Openning port                            ..............................                            OK</pre>
@@ -462,20 +322,20 @@ code {
 <pre>          Elapsed:1.5935</pre>
 <pre>          Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
 <pre>Pushing sketch                           ..............................                            OK</pre>
-<pre><span class="cmd">Closing port                             ..............................                            OK</span></pre>
+<pre>Closing port                             ..............................                            OK</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="example-1" tabindex="-1">Example</h3>
+    <h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make build RadioBlink.ino -B %DIR_OUT%\ -T %CD%\gcc3.10\bin\ -lcl %CD%\libClang -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include -S %CD%\github\hardware\arduino\zunoG2\cores -S %CD%\github\hardware\arduino\zunoG2\libraries -S %CD%\gcc3.10\lib\gcc\arm-none-eabi\10.3.1\include</pre>
 <pre></pre>
 <pre>          ***** Building sketch:D:\ZunoG2\srcs\RadioBlink.ino *****</pre>
@@ -497,27 +357,27 @@ code {
 <pre>          -----------------------------------------------------------------------------------------------</pre>
 <pre>          OTA firmware file: D:\ZunoG2\build\RadioBlink\\RadioBlink_ino_signed.bin</pre>
 <pre>          -----------------------------------------------------------------------------------------------</pre>
-<pre><span class="cmd">          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</span></pre>
+<pre>          Code size:17976 bytes CRC16:cca2 compiled:93 file(s) elapsed:24.645s</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="upload-bin" tabindex="-1">UPLOAD BIN</h2>
-<h3 id="usage--1" tabindex="-1">Usage:</h3>
+    <h2>UPLOAD BIN</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make upload_bin [-h] [-d DEVICE] [-lb [LEGACY_BAUD]] [-ub ULTRA_BAUD] [-e [EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS] filename</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make upload_bin [-h] [-d DEVICE] [-lb [LEGACY_BAUD]] [-ub ULTRA_BAUD] [-e [EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS] filename</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-1" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -569,15 +429,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example-2" tabindex="-1">Example</h3>
+<h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make upload_bin -d COM11 .\build\RadioBlink\RadioBlink_ino_signed.bin</pre>
 <pre>Closing port                             ..............................                            OK</pre>
 <pre>Openning port                            ..............................                            OK</pre>
@@ -591,27 +451,27 @@ code {
 <pre>          Elapsed:1.5978</pre>
 <pre>          Sketch crc16:5d30 size:46f8 (17.74 kB)</pre>
 <pre>Pushing sketch                           ..............................                            OK</pre>
-<pre><span class="cmd">Closing port                             ..............................                            OK</span></pre>
+<pre>Closing port                             ..............................                            OK</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="boot" tabindex="-1">BOOT</h2>
-<h3 id="usage--2" tabindex="-1">Usage:</h3>
+    <h2>BOOT</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make boot [-h] [-c CATALOG] [-f FILENAME] [-d DEVICE] [-i [INFO]] [-lb [LEGACY_BAUD]] [-t [TEST]] [-ub ULTRA_BAUD] [-ne [NO_EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS]</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make boot [-h] [-c CATALOG] [-f FILENAME] [-d DEVICE] [-i [INFO]] [-lb [LEGACY_BAUD]] [-t [TEST]] [-ub ULTRA_BAUD] [-ne [NO_EXENTENDED_SAPI]] [-nab [NO_AUTO_BAUD]] [-a ADDRESS]</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-2" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -678,15 +538,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example-3" tabindex="-1">Example</h3>
+<h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make boot -d com11 -c \hardware\arduino\zunoG2\bootloaders\</pre>
 <pre>BOOTLOADER</pre>
 <pre>Closing port                             ..............................                            OK</pre>
@@ -700,27 +560,27 @@ code {
 <pre>Rebooting Chip                           ..............................                            OK</pre>
 <pre>Checking image                           ..............................                            OK</pre>
 <pre>Waiting for bootloader                   ..............................                            OK</pre>
-<pre><span class="cmd">Closing port                             ..............................                            OK</span></pre>
+<pre>Closing port                             ..............................                            OK</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="board-info" tabindex="-1">Board info</h2>
-<h3 id="usage--3" tabindex="-1">Usage:</h3>
+    <h2>Board info</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make boardInfo [-h] [-d DEVICE] [-p PARAMS] [-n NIF] [-q QR_CODE] [-lb [LEGACY_BAUD]] [-lu LIC_UPLOAD] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]] [-dp DUMP_PRODUCT]</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make boardInfo [-h] [-d DEVICE] [-p PARAMS] [-n NIF] [-q QR_CODE] [-lb [LEGACY_BAUD]] [-lu LIC_UPLOAD] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]] [-dp DUMP_PRODUCT]</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-3" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -782,15 +642,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example-4" tabindex="-1">Example</h3>
+<h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make boardInfo -d com11</pre>
 <pre>BOARD INFO</pre>
 <pre>Closing port                             ..............................                            OK</pre>
@@ -852,27 +712,27 @@ code {
 <pre>                Z-Wave Region:EU</pre>
 <pre>                Security mode:00 Freqi:00 maxTxDb:32 adjTxDb:00 LRTxDb:00 UART:230400 extra_flags:00</pre>
 <pre>Reseting chip                            ..............................                            OK</pre>
-<pre><span class="cmd">DONE</span></pre>
+<pre>DONE</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="erase-nvm" tabindex="-1">Erase NVM</h2>
-<h3 id="usage--4" tabindex="-1">Usage:</h3>
+    <h2>Erase NVM</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make eraseNVM [-h] [-d DEVICE] [-r [RAW_MODE]] [-a ADDRESS] [-s SIZE] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]]</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make eraseNVM [-h] [-d DEVICE] [-r [RAW_MODE]] [-a ADDRESS] [-s SIZE] [-ub ULTRA_BAUD] [-nab [NO_AUTO_BAUD]]</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-4" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -919,15 +779,15 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example-5" tabindex="-1">Example</h3>
+<h3>Example</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make eraseNVM -d com11</pre>
 <pre>NVM Erase</pre>
 <pre>Closing port                             ..............................                            OK</pre>
@@ -935,27 +795,27 @@ code {
 <pre>Syncing with Z-Uno                       ..............................                            OK</pre>
 <pre>Syncing with Z-Uno                       ..............................                            OK</pre>
 <pre>Closing port                             ..............................                            OK</pre>
-<pre><span class="cmd">DONE</span></pre>
+<pre>DONE</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="write-nvm" tabindex="-1">WRITE NVM</h2>
-<h3 id="usage--5" tabindex="-1">Usage:</h3>
+    <h2>WRITE NVM</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-5" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -965,22 +825,22 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="dump-nvm" tabindex="-1">DUMP NVM</h2>
-<h3 id="usage--6" tabindex="-1">Usage:</h3>
+<h2>DUMP NVM</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-6" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -990,22 +850,22 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="arduino-size" tabindex="-1">ARDUINO SIZE</h2>
-<h3 id="usage--7" tabindex="-1">Usage:</h3>
+<h2>ARDUINO SIZE</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">$ zme_make arduino_size [-h] [-B BUILD_DIR] filename</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>$ zme_make arduino_size [-h] [-B BUILD_DIR] filename</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-7" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1027,39 +887,39 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="example--1" tabindex="-1">Example:</h3>
+<h3>Example:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make arduino_size -B D:\build\RadioBlink RadioBlink.ino </pre>
 <pre></pre>
 <pre>.text   18168</pre>
-<pre><span class="cmd">.ram    1524</span></pre>
+<pre>.ram    1524</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h2 id="arduino-dummy" tabindex="-1">ARDUINO DUMMY</h2>
-<h3 id="usage--8" tabindex="-1">Usage:</h3>
+    <h2>ARDUINO DUMMY</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-8" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1069,22 +929,22 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="arduino-preproc" tabindex="-1">ARDUINO PREPROC</h2>
-<h3 id="usage--9" tabindex="-1">Usage:</h3>
+<h2>ARDUINO PREPROC</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-9" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1094,23 +954,23 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="-" tabindex="-1">с</h2>
-<h3 id="usage--10" tabindex="-1">Usage:</h3>
+<h2>с</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
           <pre>$ zme_make trace [-h] [-d DEVICE] [-b BAUDRATE] [-fr {EU,US,ANZ,HK,MY,IN,IL,RU,CN,US_LR,US_LR_BK,EU_LR,JP,KR,FK}] [-tp TX_POWER] [-t {MODEM,PTI}] [-i INPUT] [-f FILTER] [-ir [INPUT_REENCODE]] [-o OUTPUT]</pre>
-<pre><span class="cmd">                         [-mp MAX_PACKAGES] [-mt MAX_TIME] [-p PROFILE] [-s SEND] [-r {off,payload,full,complex,hex_app}] [-dt {auto,z-uno,sapi}] [-nab [NO_AUTO_BAUD]]</span></pre>
+<pre>                         [-mp MAX_PACKAGES] [-mt MAX_TIME] [-p PROFILE] [-s SEND] [-r {off,payload,full,complex,hex_app}] [-dt {auto,z-uno,sapi}] [-nab [NO_AUTO_BAUD]]</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-10" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1197,22 +1057,22 @@ code {
 </tr>
 </tbody>
 </table>
-<h2 id="radio-test" tabindex="-1">RADIO TEST</h2>
-<h3 id="usage--11" tabindex="-1">Usage:</h3>
+<h2>RADIO TEST</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-11" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1222,22 +1082,22 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="serial-monitor" tabindex="-1">SERIAL MONITOR</h2>
-<h3 id="usage--12" tabindex="-1">Usage:</h3>
+<h2>SERIAL MONITOR</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd"></span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre></pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options-12" tabindex="-1">Options</h3>
+    <h3>Options</h3>
 <table>
 <thead>
 <tr>
@@ -1247,22 +1107,22 @@ code {
 </tr>
 </thead>
 </table>
-<h2 id="pinmap" tabindex="-1">PINMAP</h2>
-<h3 id="usage--13" tabindex="-1">Usage:</h3>
+<h2>PINMAP</h2>
+<h3>Usage:</h3>
 
-      <div class="shell">
-        <div class="shell-header">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+      <div class="shell" style="background-color: #1e1e1e; border-radius: 8px; color: #e6e6e6; font-size: 16px; line-height: 1.5; width: 120ch; padding: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); overflow-x: auto;">
+        <div class="shell-header" style="display: flex; justify-content: flex-start; gap: 8px; margin-bottom: 10px;">
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ff605c;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #ffbd44;"></span>
+          <span style="width: 12px; height: 12px; border-radius: 50%; display: inline-block; background-color: #00ca4e;"></span>
         </div>
-        <div class="shell-body">
-          <pre><span class="cmd">zme_make.py pinmap [-h] [-c {ZGM130S037HGN1,ZGM230SB27HGN,ZGM230SA27HGN,EFR32ZG23B020F512IM48,EFR32ZG23B010F512IM48,EFR32ZG23A010F512GM40}] [-s [SWD_AS_UART]] [-v VENDOR] [-pt PRODUCTTYPE_ID] [-pi PRODUCT_ID] [-pow POWER_MAX] [-efr EXTERNAL_MEMORY_FREQUENCY] [-m MAP] [-l [PINNAME_LIST]]</span></pre>
+        <div class="shell-body" style="background-color: #000; padding: 15px; border-radius: 4px; color: #00ff00; overflow-x: auto;">
+          <pre>zme_make.py pinmap [-h] [-c {ZGM130S037HGN1,ZGM230SB27HGN,ZGM230SA27HGN,EFR32ZG23B020F512IM48,EFR32ZG23B010F512IM48,EFR32ZG23A010F512GM40}] [-s [SWD_AS_UART]] [-v VENDOR] [-pt PRODUCTTYPE_ID] [-pi PRODUCT_ID] [-pow POWER_MAX] [-efr EXTERNAL_MEMORY_FREQUENCY] [-m MAP] [-l [PINNAME_LIST]]</pre>
 <pre></pre>
 
         </div>
       </div>
-    <h3 id="options--1" tabindex="-1">Options:</h3>
+    <h3>Options:</h3>
 <table>
 <thead>
 <tr>
@@ -1336,7 +1196,7 @@ code {
 <p>&lt;details&gt;&lt;summary&gt;</p>
 <h4>Default mapping of defined names and Pin number</h4>
 <p>&lt;/summary&gt;</p>
-<h3 id="pwm-pins-name" tabindex="-1">PWM pins name</h3>
+<h3>PWM pins name</h3>
 <blockquote>
 <p><em>analogWrite() Writes an analog value (PWM wave) to a pin. Can be used to light a LED varying brightnesses or drive a motor at various speeds</em></p>
 </blockquote>
@@ -1366,7 +1226,7 @@ code {
 </tr>
 </tbody>
 </table>
-<h3 id="adc" tabindex="-1">ADC</h3>
+<h3>ADC</h3>
 <blockquote>
 <p><em>analogRead()
 Reads the value from the specified analog pin. The Z-Uno board contains a 4 channel, 10-bit analog to digital converter. This means that it will map input voltages between 0 and Vcc (about 3 V) into integer values between 0 and 1023.</em></p>
@@ -1397,11 +1257,11 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-<h3 id="serial" tabindex="-1">Serial</h3>
+<h3>Serial</h3>
 <blockquote>
 <p><em>Serial() Used for communication between the Z-Uno board and another microcontroller or a computer via UART or USB.</em></p>
 </blockquote>
-<h3 id="serial0" tabindex="-1">Serial0</h3>
+<h3>Serial0</h3>
 <table>
 <thead>
 <tr>
@@ -1420,7 +1280,7 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-<h3 id="serial1" tabindex="-1">Serial1</h3>
+<h3>Serial1</h3>
 <table>
 <thead>
 <tr>
@@ -1439,7 +1299,7 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-<h3 id="serial-1" tabindex="-1">Serial</h3>
+<h3>Serial</h3>
 <blockquote>
 <p><em>default serial port for connect to PC (upload sketch and update device)</em></p>
 </blockquote>
@@ -1461,7 +1321,7 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-<h3 id="spi0" tabindex="-1">SPI0</h3>
+<h3>SPI0</h3>
 <table>
 <thead>
 <tr>
@@ -1488,7 +1348,7 @@ Reads the value from the specified analog pin. The Z-Uno board contains a 4 chan
 </tr>
 </tbody>
 </table>
-<h3 id="spi1" tabindex="-1">SPI1</h3>
+<h3>SPI1</h3>
 <table>
 <thead>
 <tr>
